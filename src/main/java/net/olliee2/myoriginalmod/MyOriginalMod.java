@@ -1,4 +1,4 @@
-package net.olliee2.mod;
+package net.olliee2.myoriginalmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -16,12 +16,13 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.olliee2.mod.item.ModItems;
+import net.olliee2.myoriginalmod.block.ModBlocks;
+import net.olliee2.myoriginalmod.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@net.neoforged.fml.common.Mod(Mod.MOD_ID)
-public class Mod {
+@net.neoforged.fml.common.Mod(MyOriginalMod.MOD_ID)
+public class MyOriginalMod {
     // Define mod id in a common place for everything to reference
     // Placeholder name
     public static final String MOD_ID = "myoriginalmod";
@@ -31,7 +32,7 @@ public class Mod {
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public Mod(IEventBus modEventBus, ModContainer modContainer) {
+    public MyOriginalMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -41,6 +42,7 @@ public class Mod {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -67,6 +69,12 @@ public class Mod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.KRICKETOTIUM);
+            event.accept(ModItems.RAW_KRICKETOTIUM);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.KRICKETOTIUM_BLOCK);
+            event.accept(ModBlocks.KRICKETOTIUM_ORE);
         }
     }
 

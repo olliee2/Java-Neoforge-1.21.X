@@ -1,3 +1,7 @@
 {
-  "item.myoriginalmod.kricketotium": "Kricketotium"
+  "item.myoriginalmod.kricketotium": "Kricketotium",
+  "item.myoriginalmod.raw_kricketotium": "Raw Kricketotium",
+
+  "block.myoriginalmod.kricketotium_block": "Block of Kricketotium",
+  "block.myoriginalmod.kricketotium_ore": "Kricketotium Ore"
 }
