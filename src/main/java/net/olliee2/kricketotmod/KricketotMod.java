@@ -66,7 +66,6 @@ public class KricketotMod {
         Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
     }
 
-    // TODO: Add creative menu page
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.KRICKETOTIUM);
@@ -76,6 +75,7 @@ public class KricketotMod {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.KRICKETOTIUM_BLOCK);
             event.accept(ModBlocks.KRICKETOTIUM_ORE);
+            event.accept(ModBlocks.KRICKETOTIUM_DEEPSLATE_ORE);
         }
     }
 
