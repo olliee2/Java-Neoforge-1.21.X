@@ -17,6 +17,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.olliee2.myoriginalmod.block.ModBlocks;
+import net.olliee2.myoriginalmod.item.ModCreativeModeTabs;
 import net.olliee2.myoriginalmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -27,7 +28,6 @@ public class MyOriginalMod {
     // Placeholder name
     public static final String MOD_ID = "myoriginalmod";
     // Directly reference a slf4j logger
-    // TODO: Research slf4j loggers
     private static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -40,6 +40,8 @@ public class MyOriginalMod {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -64,7 +66,6 @@ public class MyOriginalMod {
         Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
     }
 
-    // Add the example block item to the building blocks tab
     // TODO: Add creative menu page
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {

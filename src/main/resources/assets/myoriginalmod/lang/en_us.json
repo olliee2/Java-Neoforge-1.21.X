@@ -3,5 +3,7 @@
   "item.myoriginalmod.raw_kricketotium": "Raw Kricketotium",
 
   "block.myoriginalmod.kricketotium_block": "Block of Kricketotium",
-  "block.myoriginalmod.kricketotium_ore": "Kricketotium Ore"
+  "block.myoriginalmod.kricketotium_ore": "Kricketotium Ore",
+
+  "creativetab.myoriginalmod.kricketot_items": "Kricketot Items"
 }
