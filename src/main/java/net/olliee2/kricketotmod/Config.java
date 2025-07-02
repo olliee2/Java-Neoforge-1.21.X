@@ -1,4 +1,4 @@
-package net.olliee2.myoriginalmod;
+package net.olliee2.kricketotmod;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

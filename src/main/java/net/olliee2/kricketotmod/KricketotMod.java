@@ -1,4 +1,4 @@
-package net.olliee2.myoriginalmod;
+package net.olliee2.kricketotmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -16,23 +16,23 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.olliee2.myoriginalmod.block.ModBlocks;
-import net.olliee2.myoriginalmod.item.ModCreativeModeTabs;
-import net.olliee2.myoriginalmod.item.ModItems;
+import net.olliee2.kricketotmod.block.ModBlocks;
+import net.olliee2.kricketotmod.item.ModCreativeModeTabs;
+import net.olliee2.kricketotmod.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@net.neoforged.fml.common.Mod(MyOriginalMod.MOD_ID)
-public class MyOriginalMod {
+@net.neoforged.fml.common.Mod(KricketotMod.MOD_ID)
+public class KricketotMod {
     // Define mod id in a common place for everything to reference
     // Placeholder name
-    public static final String MOD_ID = "myoriginalmod";
+    public static final String MOD_ID = "kricketotmod";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public MyOriginalMod(IEventBus modEventBus, ModContainer modContainer) {
+    public KricketotMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 

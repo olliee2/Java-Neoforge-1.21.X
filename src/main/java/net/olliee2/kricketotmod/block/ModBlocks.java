@@ -1,4 +1,4 @@
-package net.olliee2.myoriginalmod.block;
+package net.olliee2.kricketotmod.block;
 
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -10,13 +10,13 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.olliee2.myoriginalmod.MyOriginalMod;
-import net.olliee2.myoriginalmod.item.ModItems;
+import net.olliee2.kricketotmod.KricketotMod;
+import net.olliee2.kricketotmod.item.ModItems;
 
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MyOriginalMod.MOD_ID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(KricketotMod.MOD_ID);
 
     public static final DeferredBlock<Block> KRICKETOTIUM_BLOCK = registerBlock("kricketotium_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.FROGLIGHT)));
 

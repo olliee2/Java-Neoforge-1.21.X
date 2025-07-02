@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "myoriginalmod:item/raw_kricketotium"
+    "layer0": "kricketotmod:item/kricketotium"
   }
 }
