@@ -3,7 +3,6 @@ package net.olliee2.kricketotmod;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -67,16 +66,6 @@ public class KricketotMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.KRICKETOTIUM);
-            event.accept(ModItems.RAW_KRICKETOTIUM);
-        }
-
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.KRICKETOTIUM_BLOCK);
-            event.accept(ModBlocks.KRICKETOTIUM_ORE);
-            event.accept(ModBlocks.KRICKETOTIUM_DEEPSLATE_ORE);
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

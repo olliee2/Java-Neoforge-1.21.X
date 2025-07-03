@@ -22,7 +22,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> KRICKETOTIUM_ORE = registerBlock("kricketotium_ore", () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> KRICKETOTIUM_DEEPSLATE_ORE = registerBlock("kricketotium_deepslate_ore", () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final DeferredBlock<Block> DEEPSLATE_KRICKETOTIUM_ORE = registerBlock("kricketotium_deepslate_ore", () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

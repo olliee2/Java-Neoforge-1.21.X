@@ -6,5 +6,7 @@
   "block.kricketotmod.kricketotium_ore": "Kricketotium Ore",
   "block.kricketotmod.kricketotium_deepslate_ore": "Deepslate Kricketotium Ore",
 
-  "creativetab.kricketotmod.kricketot_items": "Kricketot Items"
+  "item.kricketotmod.kricketot_wand": "Kricketot Wand",
+
+  "creativetab.kricketotmod.kricketot_mod": "Kricketot Mod"
 }
