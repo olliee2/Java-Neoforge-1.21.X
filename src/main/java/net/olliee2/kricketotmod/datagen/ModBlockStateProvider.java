@@ -8,6 +8,7 @@ import net.olliee2.kricketotmod.KricketotMod;
 import net.olliee2.kricketotmod.block.ModBlocks;
 
 public class ModBlockStateProvider extends BlockStateProvider {
+    // Constructor
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, KricketotMod.MOD_ID, exFileHelper);
     }

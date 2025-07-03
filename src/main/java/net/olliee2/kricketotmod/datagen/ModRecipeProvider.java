@@ -22,22 +22,26 @@ import static net.minecraft.data.recipes.ShapedRecipeBuilder.shaped;
 import static net.minecraft.data.recipes.ShapelessRecipeBuilder.shapeless;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    // Constructor
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries);
     }
 
+    // Helper method
     protected static void oreSmelting(@NotNull RecipeOutput recipeOutput, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult,
                                       float pExperience, int pCookingTIme, @NotNull String pGroup) {
         oreCooking(recipeOutput, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
 
+    // Helper method
     protected static void oreBlasting(@NotNull RecipeOutput recipeOutput, List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult,
                                       float pExperience, int pCookingTime, @NotNull String pGroup) {
         oreCooking(recipeOutput, RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new, pIngredients, pCategory, pResult,
                 pExperience, pCookingTime, pGroup, "_from_blasting");
     }
 
+    // Helper method
     protected static <T extends AbstractCookingRecipe> void oreCooking(@NotNull RecipeOutput recipeOutput, RecipeSerializer<T> pCookingSerializer, AbstractCookingRecipe.@NotNull Factory<T> factory,
                                                                        List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience, int pCookingTime, @NotNull String pGroup, String pRecipeName) {
         for (ItemLike itemlike : pIngredients) {
@@ -46,6 +50,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
+    // Called
     protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
         List<ItemLike> KRICKETOTIUM_SMELTABLES = List.of(ModItems.RAW_KRICKETOTIUM,
                 ModBlocks.KRICKETOTIUM_ORE, ModBlocks.DEEPSLATE_KRICKETOTIUM_ORE);
@@ -75,6 +80,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         shapeless(RecipeCategory.MISC, ModItems.KRICKETOTIUM.get(), 9)
                 .requires(ModBlocks.KRICKETOTIUM_BLOCK)
                 .unlockedBy("has_kricketotium_block", has(ModBlocks.KRICKETOTIUM_BLOCK)).save(recipeOutput);
+
+        shapeless(RecipeCategory.MISC, ModBlocks.KRICKETOTIUM_ORE.get())
+                .requires(Items.END_STONE, 1)
+                .requires(Items.JUNGLE_LOG, 1)
+                .unlockedBy("has_end_stone", has(Items.END_STONE)).save(recipeOutput);
 
         oreSmelting(recipeOutput, KRICKETOTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.KRICKETOTIUM.get(), 0.25f, 200, "kricketotium");
         oreBlasting(recipeOutput, KRICKETOTIUM_SMELTABLES, RecipeCategory.MISC, ModItems.KRICKETOTIUM.get(), 0.25f, 100, "kricketotium");

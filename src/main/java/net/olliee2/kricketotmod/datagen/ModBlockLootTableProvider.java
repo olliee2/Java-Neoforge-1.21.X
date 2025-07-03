@@ -21,6 +21,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Set;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
+    // Constructor
     protected ModBlockLootTableProvider(HolderLookup.Provider registries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
     }

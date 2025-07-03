@@ -17,6 +17,7 @@ import net.olliee2.kricketotmod.util.ModTags;
 import org.jetbrains.annotations.NotNull;
 
 public class KricketotiumDrumBlock extends Block {
+    // Constructor
     public KricketotiumDrumBlock(Properties properties) {
         super(properties);
     }

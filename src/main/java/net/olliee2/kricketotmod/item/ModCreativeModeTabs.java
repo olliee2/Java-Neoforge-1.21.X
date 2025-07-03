@@ -24,7 +24,6 @@ public class ModCreativeModeTabs {
         output.accept(ModBlocks.KRICKETOTIUM_DRUM);
         output.accept(ModItems.KRICKETOTIUM_LOAF);
         output.accept(ModItems.BLAZING_KRICKETOT);
-        // All items and blocks from the mod goes here.
     })).build());
 
     public static void register(IEventBus eventBus) {

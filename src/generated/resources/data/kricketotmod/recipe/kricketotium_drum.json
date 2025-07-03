@@ -2,20 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": {
-      "item": "minecraft:blaze_powder"
-    },
     "K": {
       "item": "kricketotmod:kricketotium"
+    },
+    "L": {
+      "item": "minecraft:jungle_log"
     }
   },
   "pattern": [
-    "KKK",
-    "KBK",
-    "KKK"
+    "K",
+    "L"
   ],
   "result": {
     "count": 1,
-    "id": "kricketotmod:blazing_kricketot"
+    "id": "kricketotmod:kricketotium_drum"
   }
 }

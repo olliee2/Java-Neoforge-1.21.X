@@ -10,6 +10,7 @@ import net.olliee2.kricketotmod.item.ModItems;
 import java.util.concurrent.CompletableFuture;
 
 public class ModDataMapProvider extends DataMapProvider {
+    // Constructor
     protected ModDataMapProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(packOutput, lookupProvider);
     }

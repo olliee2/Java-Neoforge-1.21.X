@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:jungle_log"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kricketotmod:kricketotium_ore"
+  }
+}

@@ -24,9 +24,10 @@ public class KricketotWandItem extends Item {
             Map.of(
                     Blocks.COPPER_ORE, ModBlocks.KRICKETOTIUM_ORE.get(),
                     Blocks.DEEPSLATE_COPPER_ORE, ModBlocks.DEEPSLATE_KRICKETOTIUM_ORE.get(),
-                    Blocks.FIRE, Blocks.OAK_LEAVES
+                    Blocks.FIRE, Blocks.JUNGLE_LEAVES
             );
 
+    // Constructor
     public KricketotWandItem(Properties properties) {
         super(properties);
     }

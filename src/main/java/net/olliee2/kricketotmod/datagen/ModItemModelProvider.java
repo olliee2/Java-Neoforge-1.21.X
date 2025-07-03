@@ -7,7 +7,7 @@ import net.olliee2.kricketotmod.KricketotMod;
 import net.olliee2.kricketotmod.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
-
+    // Constructor
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, KricketotMod.MOD_ID, existingFileHelper);
     }
