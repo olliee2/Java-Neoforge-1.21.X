@@ -16,6 +16,9 @@ public class ModItems {
     public static final DeferredItem<Item> KRICKETOT_WAND = ITEMS.register("kricketot_wand",
             () -> new KricketotWandItem(new Item.Properties().durability(256)));
 
+    public static final DeferredItem<Item> KRICKETOTIUM_LOAF = ITEMS.register("kricketotium_loaf",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.KRICKETOTIUM_LOAF)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
