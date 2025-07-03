@@ -23,3 +23,6 @@ _ Shift right-click the drum with the wand to summon the rain through the power 
 - Right click copper ore or deepslate copper ore with the wand to turn them into their corresponding kricketotium ore forms.
 - Right click fire obtained by flint and steel with the wand to turn it into jungle leaves.
 - Surround a blaze powder with 8 kricketotium to craft 8 blazing kricketotium, a very good fuel source.
+
+# Explanation video
+https://www.youtube.com/watch?v=cvSj9UaB-tA
