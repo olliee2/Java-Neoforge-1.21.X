@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "kricketotmod:kricketotium"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "pattern": [
+    "KKK",
+    "KBK",
+    "KKK"
+  ],
+  "result": {
+    "count": 8,
+    "id": "kricketotmod:blazing_kricketot"
+  }
+}
