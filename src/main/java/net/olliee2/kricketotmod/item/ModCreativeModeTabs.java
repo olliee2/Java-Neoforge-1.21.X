@@ -14,6 +14,7 @@ import java.util.function.Supplier;
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB_DEFERRED_REGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, KricketotMod.MOD_ID);
 
+    @SuppressWarnings("unused")
     public static final Supplier<CreativeModeTab> KRICKETOT_MOD_TAB = CREATIVE_MODE_TAB_DEFERRED_REGISTER.register("kricketot_mod_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.KRICKETOTIUM.get())).title(Component.translatable("creativetab.kricketotmod.kricketot_mod")).displayItems(((parameters, output) -> {
         output.accept(ModBlocks.KRICKETOTIUM_ORE);
         output.accept(ModItems.RAW_KRICKETOTIUM);
