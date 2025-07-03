@@ -6,7 +6,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class FuelItem extends Item{
+public class FuelItem extends Item {
     private final int burnTime;
 
     public FuelItem(Properties properties, int burnTime) {

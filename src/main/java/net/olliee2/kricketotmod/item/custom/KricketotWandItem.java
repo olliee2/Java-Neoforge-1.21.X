@@ -7,6 +7,8 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -14,6 +16,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.olliee2.kricketotmod.block.ModBlocks;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
 import java.util.Map;
 
 public class KricketotWandItem extends Item {
@@ -45,9 +48,7 @@ public class KricketotWandItem extends Item {
             }
         }
         if (clickedBlock == ModBlocks.KRICKETOTIUM_DRUM.get()) {
-            System.out.println("drum clicked");
             if (!level.isClientSide() && level instanceof ServerLevel serverLevel) {
-                System.out.println("drum clicked and level is a serverlevel");
                 serverLevel.setWeatherParameters(0, 12000, true, false);
 
                 Component message = Component.translatable("message.kricketotmod.rain_started");
@@ -56,5 +57,11 @@ public class KricketotWandItem extends Item {
         }
 
         return InteractionResult.SUCCESS;
+    }
+
+    @Override
+    public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, List<Component> tooltipComponents, @NotNull TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("tooltip.kricketotmod.kricketot_wand"));
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

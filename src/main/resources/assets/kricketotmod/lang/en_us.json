@@ -9,5 +9,6 @@
   "item.kricketotmod.kricketot_wand": "Kricketot Wand",
   "block.kricketotmod.kricketotium_drum": "Kricketotium Drum",
   "creativetab.kricketotmod.kricketot_mod": "Kricketot Mod",
-  "message.kricketotmod.rain_started": "The rain pours down..."
+  "message.kricketotmod.rain_started": "The rain pours down...",
+  "tooltip.kricketotmod.kricketot_wand": "The source of any Kricketot's §dpower...§r"
 }
