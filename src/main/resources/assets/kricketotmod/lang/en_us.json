@@ -10,5 +10,7 @@
   "block.kricketotmod.kricketotium_drum": "Kricketotium Drum",
   "creativetab.kricketotmod.kricketot_mod": "Kricketot Mod",
   "message.kricketotmod.rain_started": "The rain pours down...",
+  "tooltip.kricketotmod.blazing_kricketot.shift_down": "Smelts 16 items",
+  "tooltip.kricketotmod.blazing_kricketot": "Press §eShift§r for more Information",
   "tooltip.kricketotmod.kricketot_wand": "The source of any Kricketot's §dpower...§r"
 }

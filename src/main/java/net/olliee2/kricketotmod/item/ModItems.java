@@ -1,12 +1,19 @@
 package net.olliee2.kricketotmod.item;
 
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.olliee2.kricketotmod.KricketotMod;
 import net.olliee2.kricketotmod.item.custom.FuelItem;
 import net.olliee2.kricketotmod.item.custom.KricketotWandItem;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(KricketotMod.MOD_ID);
@@ -23,7 +30,17 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.KRICKETOTIUM_LOAF)));
 
     public static final DeferredItem<Item> BLAZING_KRICKETOT = ITEMS.register("blazing_kricketot",
-            () -> new FuelItem(new Item.Properties(), 3200));
+            () -> new FuelItem(new Item.Properties(), 3200) {
+                @Override
+                public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, @NotNull List<Component> tooltipComponents, @NotNull TooltipFlag tooltipFlag) {
+                    if (Screen.hasShiftDown()) {
+                        tooltipComponents.add(Component.translatable("tooltip.kricketotmod.blazing_kricketot.shift_down"));
+                    } else {
+                        tooltipComponents.add(Component.translatable("tooltip.kricketotmod.blazing_kricketot"));
+                    }
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
