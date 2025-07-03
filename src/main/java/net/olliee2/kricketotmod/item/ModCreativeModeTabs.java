@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
         output.accept(ModItems.KRICKETOTIUM);
         output.accept(ModBlocks.KRICKETOTIUM_BLOCK);
         output.accept(ModItems.KRICKETOT_WAND);
+        output.accept(ModBlocks.KRICKETOTIUM_DRUM);
         // New items from the mod goes here.
     })).build());
 

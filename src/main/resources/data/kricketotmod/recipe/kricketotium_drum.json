@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "item": "kricketotmod:kricketotium"
+    },
+    "L": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    "K",
+    "L"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kricketotmod:kricketotium_drum"
+  }
+}

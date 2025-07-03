@@ -1,5 +1,6 @@
 package net.olliee2.kricketotmod.item.custom;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -41,6 +42,16 @@ public class KricketotWandItem extends Item {
                 });
 
                 level.playSound(null, context.getClickedPos(), SoundEvents.BEEHIVE_ENTER, SoundSource.BLOCKS);
+            }
+        }
+        if (clickedBlock == ModBlocks.KRICKETOTIUM_DRUM.get()) {
+            System.out.println("drum clicked");
+            if (!level.isClientSide() && level instanceof ServerLevel serverLevel) {
+                System.out.println("drum clicked and level is a serverlevel");
+                serverLevel.setWeatherParameters(0, 12000, true, false);
+
+                Component message = Component.translatable("message.kricketotmod.rain_started");
+                serverLevel.getServer().getPlayerList().broadcastSystemMessage(message, false);
             }
         }
 
