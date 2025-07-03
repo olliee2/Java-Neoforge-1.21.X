@@ -9,7 +9,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.olliee2.kricketotmod.KricketotMod;
-import net.olliee2.kricketotmod.item.custom.FuelItem;
 import net.olliee2.kricketotmod.item.custom.KricketotWandItem;
 import org.jetbrains.annotations.NotNull;
 
@@ -30,7 +29,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.KRICKETOTIUM_LOAF)));
 
     public static final DeferredItem<Item> BLAZING_KRICKETOT = ITEMS.register("blazing_kricketot",
-            () -> new FuelItem(new Item.Properties(), 3200) {
+            () -> new Item(new Item.Properties()) {
                 @Override
                 public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, @NotNull List<Component> tooltipComponents, @NotNull TooltipFlag tooltipFlag) {
                     if (Screen.hasShiftDown()) {

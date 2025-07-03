@@ -16,6 +16,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.olliee2.kricketotmod.block.ModBlocks;
 import net.olliee2.kricketotmod.item.ModItems;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
@@ -29,7 +30,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.KRICKETOTIUM_BLOCK.get());
         dropSelf(ModBlocks.KRICKETOTIUM_DRUM.get());
         add(ModBlocks.KRICKETOTIUM_ORE.get(), block -> createMultipleOreDrops(ModBlocks.KRICKETOTIUM_ORE.get(), ModItems.RAW_KRICKETOTIUM.get(), 2, 5));
-        add(ModBlocks.DEEPSLATE_KRICKETOTIUM_ORE.get(), block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_KRICKETOTIUM_ORE.get(), ModItems.RAW_KRICKETOTIUM.get(), 2, 7));
+        add(ModBlocks.DEEPSLATE_KRICKETOTIUM_ORE.get(), block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_KRICKETOTIUM_ORE.get(), ModItems.RAW_KRICKETOTIUM.get(), 3, 7));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {
@@ -38,7 +39,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     }
 
     @Override
-    protected Iterable<Block> getKnownBlocks() {
+    protected @NotNull Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
     }
 }
