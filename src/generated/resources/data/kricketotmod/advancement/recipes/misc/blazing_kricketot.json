@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kricketotium": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kricketotmod:kricketotium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "kricketotmod:blazing_kricketot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_kricketotium"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "kricketotmod:blazing_kricketot"
+    ]
+  }
+}
