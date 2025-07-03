@@ -57,12 +57,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('K', ModItems.KRICKETOTIUM.get())
                 .unlockedBy("has_kricketotium", has(ModItems.KRICKETOTIUM.get())).save(recipeOutput);
 
-        shaped(RecipeCategory.MISC, ModItems.BLAZING_KRICKETOT.get(), 8)
+        shaped(RecipeCategory.MISC, ModItems.BLAZING_KRICKETOT.get())
                 .pattern("KKK")
                 .pattern("KBK")
                 .pattern("KKK")
                 .define('K', ModItems.KRICKETOTIUM.get())
                 .define('B', Items.BLAZE_POWDER)
+                .unlockedBy("has_kricketotium", has(ModItems.KRICKETOTIUM.get())).save(recipeOutput);
+
+        shaped(RecipeCategory.MISC, ModBlocks.KRICKETOTIUM_DRUM.get())
+                .pattern("K")
+                .pattern("L")
+                .define('K', ModItems.KRICKETOTIUM.get())
+                .define('L', Items.JUNGLE_LOG)
                 .unlockedBy("has_kricketotium", has(ModItems.KRICKETOTIUM.get())).save(recipeOutput);
 
         shapeless(RecipeCategory.MISC, ModItems.KRICKETOTIUM.get(), 9)
