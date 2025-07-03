@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "kricketotmod:block/kricketotium_ore"
+  }
+}
