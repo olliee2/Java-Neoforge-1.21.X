@@ -19,7 +19,7 @@ The compiled mod JAR is then located in build/libs/.
 - Craft the kricketotium on top of a jungle log to create a kricketotium drum.
 - Drop a stick, blaze rod, or end rod on top of the drum to create a kricketotium wand.
 - Right-click the drum to make music.
-_ Shift right-click the drum with the wand to summon the rain through the power of a kricketot.
+- Shift right-click the drum with the wand to summon the rain through the power of a kricketot.
 - Right click copper ore or deepslate copper ore with the wand to turn them into their corresponding kricketotium ore forms.
 - Right click fire obtained by flint and steel with the wand to turn it into jungle leaves.
 - Surround a blaze powder with 8 kricketotium to craft 8 blazing kricketotium, a very good fuel source.
