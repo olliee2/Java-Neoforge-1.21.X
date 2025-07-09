@@ -23,5 +23,4 @@ public class ModTags {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(KricketotMod.MOD_ID, name));
         }
     }
-
 }

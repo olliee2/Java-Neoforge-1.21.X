@@ -50,7 +50,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
     }
 
-    // Called
+    // Called externally to build all the recipes required
     protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
         List<ItemLike> KRICKETOTIUM_SMELTABLES = List.of(ModItems.RAW_KRICKETOTIUM,
                 ModBlocks.KRICKETOTIUM_ORE, ModBlocks.DEEPSLATE_KRICKETOTIUM_ORE);
