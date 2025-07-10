@@ -10,7 +10,7 @@ Launch the game and create a new world.
 Ensure java 21 is installed.
 Clone the repository.
 Run `./gradlew build` 
-The compiled mod JAR is then located in build/libs/.
+The compiled mod JAR is then located in `/build/libs/`.
 
 # How to Play
 - Craft together 1 end stone and 1 jungle log to create a kricketotium ore.
